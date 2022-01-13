@@ -1,0 +1,27 @@
+{
+  "name": "express-intro",
+  "version": "1.0.0",
+  "description": "Introduction to express-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node app.js",
+    "mon": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinnAnony/express-js-intro.git"
+  },
+  "author": "Vinn Njeru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinnAnony/express-js-intro/issues"
+  },
+  "homepage": "https://github.com/vinnAnony/express-js-intro#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
