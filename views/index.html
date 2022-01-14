@@ -16,21 +16,14 @@
 
     <div id="form-main">
         <div id="form-div">
-            <form class="form" id="debtForm" onsubmit="submitForm();">
-                <p class="name">
-                    <input name="name" type="text" placeholder="Full Name" id="fullName" />
-                </p>
+            <h4>Below are the available routes in this REST API</h4>
 
-                <p class="email">
-                    <input name="amount" type="number"  id="amount" placeholder="Amount" />
-                </p>
-
-                <div class="submit">
-                    <input class="button-blue" type="submit" value="Add"/>
-                </div>
-            </form>
-        </div>
-
+            <p><span class="reqMethod">GET</span> /cyt</p>
+            <p><span class="reqMethod">GET</span> /api/employees</p>
+            <p><span class="reqMethod">POST</span> /api/employees</p>
+            <p><span class="reqMethod">GET</span> /api/employees/{employee_id}</p>
+            <p><span class="reqMethod">PUT</span> /api/employees/{employee_id}</p>
+            <p><span class="reqMethod">DELETE</span> /api/employees/{employee_id}</p>
     </div>
     <script src="../app.js"></script>
 </body>

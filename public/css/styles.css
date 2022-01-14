@@ -147,3 +147,7 @@ input[type=button]:hover {
         padding-right: 3%;
     }
 }
+
+.reqMethod{
+    color: #3498db;
+}
