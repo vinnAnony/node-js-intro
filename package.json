@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vinnAnony/express-js-intro.git"
+    "url": "git+https://github.com/vinnAnony/node-js-intro.git"
   },
   "author": "Vinn Njeru",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vinnAnony/express-js-intro/issues"
+    "url": "https://github.com/vinnAnony/node-js-intro/issues"
   },
-  "homepage": "https://github.com/vinnAnony/express-js-intro#readme",
+  "homepage": "https://github.com/vinnAnony/node-js-intro#readme",
   "dependencies": {
     "express": "^4.17.2"
   },

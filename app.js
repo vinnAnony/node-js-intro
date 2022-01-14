@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 app.get('/', function(req, res) {
-    res.send('Hello Team!')
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.listen(port, function() {
