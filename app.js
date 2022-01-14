@@ -10,14 +10,15 @@
 // });
 
 //Create server using express
+const path = require('path');
 const express = require('express');
 const app = express();
 const port = 4000;
 app.use(express.json());
 
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/views/index.html');
 });
 
 app.listen(port, function() {
