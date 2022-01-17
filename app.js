@@ -1,20 +1,16 @@
-//Create server using HTTP
-// const http = require('http');
-// const server = http.createServer((function (request, response) {
-//     response.writeHead(200,
-//         {"Content-Type": "text/plain"});
-//     response.end("Hello Team!\n");
-// }));
-// server.listen(4000,() => {
-//     console.log(`Server started on port ${port}`)
-// });
-
 //Create server using express
 const path = require('path');
 const express = require('express');
 const app = express();
 const port = 4000;
 app.use(express.json());
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+const swaggerUi = require('swagger-ui-express');
+const apiDocs = require('./apiDocs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res) {
@@ -54,3 +50,4 @@ const api = require('./api');
 
 app.use('/cows', cows);
 app.use('/api', api);
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiDocs));

@@ -1,15 +1,31 @@
 const express = require('express');
 const router = express.Router();
+const {body, validationResult} = require('express-validator');
+const { v4: uuidv4 } = require('uuid');
+
 
 let employees = [];
 
 router.route('/employees')
     //create
-    .post((req, res) => {
-        const employee = req.body;
-        console.log(employee);
-        employees.push(employee);
-        res.json(employees);
+    .post(
+        body('name').isLength({min: 1}).withMessage('Name required'),
+        body('age').isNumeric().withMessage('Age must be a digit'),
+        body('gender').isLength({min:1}).withMessage('Gender required'),
+        (req, res) => {
+            const errors = validationResult(req);
+            console.log(errors);
+            if (!errors.isEmpty()) {
+                return res.status(400).json({errors: errors.array()});
+            }
+            const {name, age, gender} = req.body;
+
+            let newEmployee = new Employee(uuidv4(),name, age, gender);
+            employees.push(newEmployee);
+            res.status(200).json({
+                message: 'Employee added', employee: newEmployee
+            })
+
     })
     //fetch all
     .get((req, res) => {
@@ -20,16 +36,23 @@ router.route('/employees')
 router.route('/employees/:id')
     //fetch by id
     .get((req, res) => {
-        let myEmployee = employees.find((employee) => employee.id == req.params.id);
+        let myEmployee = employees.find((employee) => employee.id === req.params.id);
 
-        res.json(myEmployee);
-        res.status(404).send('Employee not found');
+        res.json({
+            message: myEmployee ? 'Employee found' : 'Employee not found', employee: myEmployee
+        });
 
     })
     //update by id
-    .put((req, res) => {
+    .put(
+        body('name').isString().withMessage('Must be a string'),
+        body('age').isNumeric().withMessage('Age must be a digit'),
+        body('gender').isString().withMessage('Gender must be a string'),
+        (req, res) => {
         const emp_id = req.params.id;
-        const newEmployee = req.body;
+        const {name, age, gender} = req.body;
+        const newEmployee = new Employee(req.params.id, name, age, gender);
+
         let myEmployee = employees.find((employee) => employee.id == req.params.id);
         employees = employees.map((employee) => {
             if (employee.id == emp_id){
@@ -47,5 +70,15 @@ router.route('/employees/:id')
        res.status(200).json({message:'Employee deleted'})
     });
 
+class Employee {
+
+    constructor(id, name, age, gender) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+}
 
 module.exports = router
