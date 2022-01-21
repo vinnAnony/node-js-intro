@@ -1,9 +1,11 @@
 //Create server using express
 const path = require('path');
 const express = require('express');
+const cors = require("cors");
 const app = express();
 const port = 4000;
 app.use(express.json());
+app.use(cors());
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -45,9 +47,10 @@ app.route('/drivers')
     })
 
 //Express router
-const cows = require('./cows');
-const api = require('./api');
+const cows = require('./api/cows');
+const employees = require('./api/employees');
+const users = require('./api/auth/users');
 
 app.use('/cows', cows);
-app.use('/api', api);
+app.use('/api/auth', users);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiDocs));

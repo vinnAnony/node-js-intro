@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7f82b5-3f70-4df3-87e0-f6c10bad87f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apiDocs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/auth/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/employees.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cows.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/cows.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -43,11 +45,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/auth" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/views" />
     </key>
@@ -76,14 +84,24 @@
       <updated>1642060317994</updated>
       <workItem from="1642060319432" duration="24780000" />
       <workItem from="1642143020984" duration="4608000" />
-      <workItem from="1642239740553" duration="10545000" />
+      <workItem from="1642239740553" duration="11130000" />
+      <workItem from="1642412499832" duration="129000" />
+      <workItem from="1642486408545" duration="1155000" />
+      <workItem from="1642713229446" duration="12246000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="383" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1642721041499">
+      <screen x="0" y="23" width="1280" height="713" />
+    </state>
+    <state x="383" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.713@0.23.1280.713" timestamp="1642721041499" />
     <state x="295" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1642401472371">
       <screen x="0" y="23" width="1280" height="715" />
     </state>
@@ -93,9 +111,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api.js</url>
+          <url>file://$PROJECT_DIR$/api/employees.js</url>
           <line>16</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
