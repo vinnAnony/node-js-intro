@@ -52,5 +52,6 @@ const employees = require('./api/employees');
 const users = require('./api/auth/users');
 
 app.use('/cows', cows);
+app.use('/api', employees);
 app.use('/api/auth', users);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(apiDocs));

@@ -23,14 +23,13 @@ router.route('/employees')
             let newEmployee = new Employee(uuidv4(),name, age, gender);
             employees.push(newEmployee);
             res.status(200).json({
-                message: 'Employee added', employee: newEmployee
+                success: true, message: 'Employee added', employee: newEmployee
             })
 
     })
     //fetch all
     .get((req, res) => {
         res.json(employees);
-        //res.send("I'm giving you all the employees in a bit...")
     });
 
 router.route('/employees/:id')
@@ -61,14 +60,36 @@ router.route('/employees/:id')
             return employee
         });
 
-        res.status(myEmployee ? 200 : 404);
+        res.status(myEmployee ? 200 : 404).json(myEmployee ? {success:true} : {success:false});
     })
     //delete by id
     .delete((req, res) => {
        employees =  employees.filter((employee) => employee.id != req.params.id);
 
-       res.status(200).json({message:'Employee deleted'})
+       res.status(200).json({message:'Employee deleted',success:true})
     });
+
+router.route('/employees/filter-by-age')
+    .post((req, res) => {
+    const age = req.body;
+    let min = parseInt(age.min);
+    let max = parseInt(age.max);
+
+    if (min>max){
+        res.status(400).json({success:false, message:"Minimum age cannot be greater than maximum age!"});
+    }
+    else {
+        let filterEmployees = employees.filter((employee) => parseInt(employee.age) >= min && parseInt(employee.age) <=max );
+        if (filterEmployees.length >0){
+            res.status(200).json({success:true, filterEmployees});
+        }
+        else {
+            res.status(200).json({success:false, message:"No employees within that age bracket!"});
+        }
+    }
+
+
+});
 
 class Employee {
 

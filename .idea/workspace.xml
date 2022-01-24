@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7f82b5-3f70-4df3-87e0-f6c10bad87f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auth/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/employees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/employees.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cows.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/cows.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +82,8 @@
       <workItem from="1642239740553" duration="11130000" />
       <workItem from="1642412499832" duration="129000" />
       <workItem from="1642486408545" duration="1155000" />
-      <workItem from="1642713229446" duration="12246000" />
+      <workItem from="1642713229446" duration="19060000" />
+      <workItem from="1643010714225" duration="3017000" />
     </task>
     <servers />
   </component>
@@ -106,16 +102,9 @@
       <screen x="0" y="23" width="1280" height="715" />
     </state>
     <state x="295" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.715@0.23.1280.715" timestamp="1642401472371" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/employees.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="370" y="296" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1642762912731">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state x="370" y="296" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1280.715@0.23.1280.715" timestamp="1642762912731" />
   </component>
 </project>
